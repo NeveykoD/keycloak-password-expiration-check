@@ -1,0 +1,2 @@
+org\keycloak\authentication\authenticators\conditional\ConditionalUserAttributeValueFactory.class
+org\keycloak\authentication\authenticators\conditional\ConditionalUserAttributeValue.class

@@ -23,8 +23,8 @@ Solution:
 ![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/68e8b91a-7484-4a7a-9528-8e3b41ef7f48)  
 1.3 We navigate to the 'Settings' tab and choose 'Sync all users' from the Action dropdown.
 
-2 Upload the JAR file to the server.  
-2.1 Download the keycloak-password-expiration-check-v23.0.3.jar https://github.com/NeveykoD/keycloak-password-expiration-check/releases/tag/keyclaok  
-2.2 Upload it to /opt/keycloak/providers/ and ensure that the owner is keycloak:keycloak.
-2.3 We go to the directory /opt/keycloak/bin/ and run the command ./kc.sh build.  
-2.4 Restart the service: systemctl restart keycloak.
+2 Upload the JAR file to the server.    
+2.1 Download the keycloak-password-expiration-check-v23.0.3.jar https://github.com/NeveykoD/keycloak-password-expiration-check/releases/tag/keyclaok   
+2.2 Upload it to /opt/keycloak/providers/ and ensure that the owner is keycloak:keycloak.  
+2.3 We go to the directory /opt/keycloak/bin/ and run the command ./kc.sh build.    
+2.4 Restart the service: systemctl restart keycloak.  

@@ -18,6 +18,7 @@ Solution:
 1.3.4 In the "LDAP Attributes" field, input 'krbPasswordExpiration'. This parameter can be viewed on FreeIPA by executing the following commands from the server console:
 
 [root@freeIPA /]# kinit user_name
+
 [root@freeIPA /]# ipa user-find --login user_name --all --raw
 1.3.5 Click 'Save'.
 

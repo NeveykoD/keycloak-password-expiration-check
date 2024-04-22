@@ -8,7 +8,7 @@ To ensure that Keycloak knows when a user's password expiration date is approach
 
 **Step by Step:**
 
-**1 Need to map the value of krbPasswordExpiration from FreeIPA.  **
+**1 Need to map the value of krbPasswordExpiration from FreeIPA.**  
 1.1 We go to User federation and select our previously configured LDAP
 
 ![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/98d059a9-5565-4e44-a894-a9de9be5c909)
@@ -27,13 +27,13 @@ To ensure that Keycloak knows when a user's password expiration date is approach
 ![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/68e8b91a-7484-4a7a-9528-8e3b41ef7f48)  
 1.3 We navigate to the 'Settings' tab and choose 'Sync all users' from the Action dropdown.
 
-**2 Upload the JAR file to the server.    **
+**2 Upload the JAR file to the server.**  
 2.1 Download the keycloak-password-expiration-check-v23.0.3.jar https://github.com/NeveykoD/keycloak-password-expiration-check/releases/tag/keyclaok   
 2.2 Upload it to /opt/keycloak/providers/ and ensure that the owner is keycloak:keycloak.  
 2.3 We go to the directory /opt/keycloak/bin/ and run the command ./kc.sh build.    
 2.4 Restart the service: systemctl restart keycloak.  
 
-**3 Authentication flow creation.  **
+**3 Authentication flow creation.**  
 3.1 In Keycloak, we navigate to Authentication and either duplicate the current flow or create a new one.  
 ![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/9e137bbe-48f5-4dbe-8c06-e3789c91381f)  
 3.2 In "Condition - user attribute," we input the attribute krbPasswordExpiration.  

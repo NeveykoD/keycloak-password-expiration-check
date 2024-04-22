@@ -16,8 +16,11 @@ Solution:
 1.3.2 Choose 'user-attribute-ldap-mapper' in the Mapper typescript.
 1.3.3 Name the User Model Attribute 'krbPasswordExpiration' as well.
 1.3.4 In the "LDAP Attributes" field, input 'krbPasswordExpiration'. This parameter can be viewed on FreeIPA by executing the following commands from the server console:
+
 [root@freeIPA /]# kinit user_name
+
 [root@freeIPA /]# ipa user-find --login user_name --all --raw
+
 1.3.5 Click 'Save'.
 
 ![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/68e8b91a-7484-4a7a-9528-8e3b41ef7f48)

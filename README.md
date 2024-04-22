@@ -4,7 +4,7 @@ When using Keycloak in conjunction with FreeIPA (where users are managed in Free
 
 Solution.
 
-To ensure that Keycloak knows when a user's password expiration date is approaching, we'll pass the krbPasswordExpiration parameter from FreeIPA. In the authentication flow, we'll use the "Condition - user attribute" module (the flow is executed only if the user attribute exists and has the expected value), but we'll slightly edit it so that it can compare the value of krbPasswordExpiration and deny access if it has already expired.
+To ensure that Keycloak knows when a user's password expiration date is approaching, we'll pass the krbPasswordExpiration parameter from FreeIPA. In the authentication flow, we'll use the 'Condition - user attribute' module (the flow is executed only if the user attribute exists and has the expected value). However, we'll slightly edit it to enable comparison of the krbPasswordExpiration value, capable of processing the date in the format "yyyyMMddHHmmssX", and deny access if it has already expired.
 
 Step by Step:
 

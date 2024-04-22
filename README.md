@@ -39,7 +39,9 @@ Step by Step:
 3.2 In "Condition - user attribute," we input the attribute krbPasswordExpiration.  
 ![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/f1cfda8e-3f28-4fc6-86f0-fc69ff396fa5)  
 3.3 In "Deny access," we input the error message: "Your IPA password has expired, please change your password."  
-![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/d02559a8-8808-4f14-a402-612b9b689dec)  
+![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/d02559a8-8808-4f14-a402-612b9b689dec)   
+![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/132ade86-b7b4-4271-a021-f76fdd0e118b)  
+
 3.4 Bind flow
 
 

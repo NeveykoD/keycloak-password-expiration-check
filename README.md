@@ -2,7 +2,11 @@ Issue:
 
 When using Keycloak in conjunction with FreeIPA (where users are managed in FreeIPA and Keycloak is configured with "User federation" using LDAP), if a user's password expires in FreeIPA, that user can still log in to Keycloak with the expired password.
 
-Solution:
+Solution.
+
+To ensure that Keycloak knows when a user's password expiration date is approaching, we'll pass the krbPasswordExpiration parameter from FreeIPA. In the authentication flow, we'll use the "Condition - user attribute" module (the flow is executed only if the user attribute exists and has the expected value), but we'll slightly edit it so that it can compare the value of krbPasswordExpiration and deny access if it has already expired.
+
+Step by Step:
 
 1 Need to map the value of krbPasswordExpiration from FreeIPA.  
 1.1 We go to User federation and select our previously configured LDAP
@@ -36,5 +40,6 @@ Solution:
 ![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/f1cfda8e-3f28-4fc6-86f0-fc69ff396fa5)  
 3.3 In "Deny access," we input the error message: "Your IPA password has expired, please change your password."  
 ![image](https://github.com/NeveykoD/keycloak-password-expiration-check/assets/109217257/d02559a8-8808-4f14-a402-612b9b689dec)  
+3.4 Bind flow
 
 
